@@ -308,9 +308,8 @@ class GameView {
         }
         let pad = gamepads[0];
 
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i <= 7; i++) {
             if (pad.buttons[i].pressed) {
-                console.log("button");
                 this.keys.jump = true;
                 break;
             }
@@ -333,7 +332,7 @@ class GameView {
             this.moveLeft();
         }
 
-        if (this.keys[13]) {
+        if (this.keys[13] || pad.buttons[9].pressed) {
             this.reset();
             this.keys[13] = false;
         }
