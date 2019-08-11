@@ -308,18 +308,13 @@ class GameView {
         }
         let pad = gamepads[0];
 
-
         for (let i = 0; i < 7; i++) {
-            if (gamepad.buttons[i].pressed) {
+            if (pad.buttons[i].pressed) {
+                console.log("button");
                 this.keys.jump = true;
                 break;
             }
         }
-
-
-
-
-
 
         if (this.keys.jump) {
             this.jump();
@@ -330,11 +325,11 @@ class GameView {
             this.jump();
         }
 
-        if (this.keys[39] || this.keys[68]) {
+        if (this.keys[39] || this.keys[68] || pad.axes[2] > 0.95) {
             this.moveRight();
         }
 
-        if (this.keys[37] || this.keys[65]) {
+        if (this.keys[37] || this.keys[65] || pad.axes[2] < -0.95) {
             this.moveLeft();
         }
 
