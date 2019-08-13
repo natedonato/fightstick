@@ -315,7 +315,7 @@ class GameView {
             }
         }
 
-        if (this.keys.jump) {
+        if (this.keys.jump || pad.axes[1] < -0.95) {
             this.jump();
             this.keys.jump = false;
         }
@@ -324,11 +324,11 @@ class GameView {
             this.jump();
         }
 
-        if (this.keys[39] || this.keys[68] || pad.axes[2] > 0.95) {
+        if (this.keys[39] || this.keys[68] || pad.axes[0] > 0.95) {
             this.moveRight();
         }
 
-        if (this.keys[37] || this.keys[65] || pad.axes[2] < -0.95) {
+        if (this.keys[37] || this.keys[65] || pad.axes[0] < -0.95) {
             this.moveLeft();
         }
 
