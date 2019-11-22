@@ -4,4 +4,5 @@ This is a static version of my [Landslide](http://landslide.natedonato.com) game
 
 Live demo link to try with your own controller: http://natedonato.com/fightstick/
 
-Note: this version is gamepad controls ONLY.  To play with your keyboard (and compete for high scores) visit the original [Landslide](http://landslide.natedonato.com)
+Note: this version is for gamepad controls ONLY.  
+To play with your keyboard (and compete for high scores) visit the original [Landslide](http://landslide.natedonato.com)
